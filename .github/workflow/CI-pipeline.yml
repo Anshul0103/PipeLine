@@ -14,4 +14,4 @@ on:
                 uses: actions/checkout@v2
 
               - name: schedule pipeline
-                run: echo "Pipeline scheduled for branch:first schedule"
+                run: echo "Pipeline scheduled for branch:first schedule runn"
