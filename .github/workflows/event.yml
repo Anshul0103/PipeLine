@@ -2,9 +2,12 @@ name: Pipeline-1
 on: push
 
 jobs:
-  pip-1:
+  CI:
     runs-on: ubuntu-latest
     steps:
     - name: plan
       run: | 
         echo "first run"
+    - name: apply
+      run: | 
+        echo "second run"
