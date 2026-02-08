@@ -19,12 +19,21 @@
 name: Manual CI pipeline
 on:
   workflow_dispatch:
+    # inputs:
+    #   branch:
+    #     description: "Branch to run the pipeline on"
+    #     required: true
+    #     default: ${{ github.ref_name }}
+
 jobs:
   run-manual-pipeline:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout selected branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/pipeline
 
       - name: Schedule pipeline
-        run: echo "Pipeline scheduled for branch"
+        run: echo "Pipeline running on branch"
