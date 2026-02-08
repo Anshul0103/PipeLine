@@ -2,7 +2,8 @@ name: Pipeline-1
 on: push
 
 jobs:
-  CI:
+  CI:                                                # Job ID (mandatory)
+    name: Pipeline Job                               # Friendly display name (optional)
     runs-on: ubuntu-latest
     steps:
     - name: plan
