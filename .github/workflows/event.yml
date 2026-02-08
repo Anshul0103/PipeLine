@@ -2,7 +2,7 @@ name: Pipeline-1
 on: push
 
 jobs:
-  pip1:
+  pip-1:
     runs-on: ubuntu-latest
     steps:
     - name: plan
