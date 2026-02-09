@@ -1,6 +1,28 @@
 name: Manual Pipeline
 on:
     workflow_dispatch:
+        inputs:
+            environment:
+                description: "Environment"
+                required: true
+                default: "dev"
+                # type: string
+                type: choice
+                options:
+                    - dev
+                    - prod
+                    - nonprod
+                    - test
+
+            action:
+                description: "Action"
+                required: true
+                default: "plan"
+                type: string
+                # type: choice
+                # options:
+                #     - plan
+                #     - apply
 
 jobs:
     CI:
@@ -12,3 +34,12 @@ jobs:
             - name: apply
               run: |
                   echo "this is second step manual pipeline run"
+    CD:
+        runs-on: ubuntu-latest
+        steps:
+            - name: plan
+              uses: actions/checkout@v2
+
+            - name: apply
+              run: |
+                  echo "this is second step for CD manual pipeline run"
