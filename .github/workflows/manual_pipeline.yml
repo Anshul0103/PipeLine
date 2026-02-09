@@ -1,0 +1,14 @@
+name: Manual Pipeline
+on:
+    workflow_dispatch:
+
+jobs:
+    CI:
+        runs-on: ubuntu-latest
+        steps:
+            - name: plan
+              uses: actions/checkout@v2
+
+            - name: apply
+              run: |
+                  echo "this is second step manual pipeline run"
