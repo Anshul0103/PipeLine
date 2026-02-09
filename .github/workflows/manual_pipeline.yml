@@ -13,6 +13,15 @@ on:
                     - nonprod
                     - test
 
+            action:
+                description: "What should this pipeline do?"
+                required: true
+                default: "plan"
+                type: choice
+                options:
+                    - plan
+                    - apply
+
 jobs:
     CI:
         runs-on: ubuntu-latest
