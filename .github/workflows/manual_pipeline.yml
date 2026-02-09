@@ -6,13 +6,13 @@ on:
                 description: "Environment"
                 required: true
                 default: "dev"
-                type: string
-                # type: choice
-                # options:
-                #     - dev
-                #     - prod
-                #     - nonprod
-                #     - test
+                # type: string
+                type: choice
+                options:
+                    - dev
+                    - prod
+                    - nonprod
+                    - test
 
             action:
                 description: "Action"
