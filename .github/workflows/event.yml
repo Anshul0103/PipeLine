@@ -1,5 +1,7 @@
 name: Pipeline-1                                     # Workflow name displayed in GitHub Actions
-on: push                                             # Trigger: runs automatically on every push (all branches by default)
+# on: push                                             # Trigger: runs automatically on every push (all branches by default)
+on:
+  workflow_dispatch:                                 # 👈 only runs when you click "Run workflow"
 
 jobs:
   CI:                                                # Job ID (mandatory, used internally by GitHub Actions)
