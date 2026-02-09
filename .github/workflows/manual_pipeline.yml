@@ -1,6 +1,17 @@
 name: Manual Pipeline
 on:
     workflow_dispatch:
+        inputs:
+            environment:
+                description: "Where do you want to run this?"
+                required: true
+                default: "dev"
+                type: choice
+                options:
+                    - dev
+                    - prod
+                    - nonprod
+                    - test
 
 jobs:
     CI:
