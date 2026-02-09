@@ -2,7 +2,7 @@ name: Manual Pipeline
 on:
     workflow_dispatch:
         inputs:
-            ram:
+            environment:
                 description: "Environment"
                 required: true
                 default: "dev"
