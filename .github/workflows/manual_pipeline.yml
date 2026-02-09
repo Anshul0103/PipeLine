@@ -3,7 +3,7 @@ on:
     workflow_dispatch:
         inputs:
             environment:
-                description: "Where do you want to run this?"
+                description: "Environment"
                 required: true
                 default: "dev"
                 type: choice
@@ -14,7 +14,7 @@ on:
                     - test
 
             action:
-                description: "What should this pipeline do?"
+                description: "Action"
                 required: true
                 default: "plan"
                 type: choice
