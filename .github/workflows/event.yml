@@ -1,13 +1,13 @@
-name: Pipeline-1 # Workflow name displayed in GitHub Actions
+name: Pipeline-1                                    # Workflow name displayed in GitHub Actions
 # on: push                                             # Trigger: runs automatically on every push (all branches by default)
 on:
-  workflow_dispatch: # 👈 only runs when you click "Run workflow"
+  workflow_dispatch:                                # 👈 only runs when you click "Run workflow"
 
 jobs:
-  CI: # Job ID (mandatory, used internally by GitHub Actions)
-    name: Pipeline Job # Optional friendly display name shown in UI
-    runs-on: ubuntu-latest # Runner/VM to execute this job
-    steps: # List of sequential steps executed in this job
+  CI:                                               # Job ID (mandatory, used internally by GitHub Actions)
+    name: Pipeline Job                              # Optional friendly display name shown in UI
+    runs-on: ubuntu-latest                          # Runner/VM to execute this job
+    steps:                                          # List of sequential steps executed in this job
       - name: plan
         run: |
           echo "first run"                           # Step 1: prints "first run" in logs
